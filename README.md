@@ -31,7 +31,7 @@
 
 <details>
 <summary>프로토타입</summary>
-<a href="https://sjun4040.github.io/prototype/" target="_blank">▶️ 프로토타입 바로가기</a>
+📦 **[툭툭 프로토타입 보러가기](https://sjun4040.github.io/prototype/)**  
 </details>
 
 ---
