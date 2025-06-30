@@ -1,162 +1,104 @@
-# Tooktook_personal
-본 프로젝트는 팀 프로젝트에서 출발했으며 개인적으로 리팩토링/정리한 버전입니다.
+# 🐱‍💻 Tooktook (Personal Version)
 
-# 🐱‍💻💬 Tooktook
-**실시간 정책자금 AI 상담 지원 시스템**
+> ✨ **본 프로젝트는 LG U+ WhyNot Camp 7기 팀 프로젝트에서 출발하였으며 개인 포트폴리오 용도로 구조와 내용을 재정비한 버전입니다.**
+
+---
+
+## 💬 프로젝트 개요
+
+**Tooktook**은 상담사의 업무 효율성과 정확성을 높이기 위한 **AI 기반 실시간 상담 지원 시스템**입니다. 상담 중 발생하는 반복적이고 복잡한 문의 상황에서, 실시간 음성 인식(STT), 키워드 기반 응답 추천, 상담 요약 등 다양한 기능을 통해 상담사를 보조합니다.
 
 <p align="center">
   <img src="./pic/툭툭이.png" alt="툭툭이" width="220"/>
-  <img src="./pic/툭툭이2.png"" alt="툭툭이2" width="220"/>
+  <img src="./pic/툭툭이2.png" alt="툭툭이2" width="220"/>
   <br/>
-  <em style="font-size: 13px; color: gray;">※ 이 이미지는 GPT로 생성된 캐릭터입니다</em>
+  <em style="font-size: 13px; color: gray;">* GPT 기반 이미지 생성 툴을 활용해 제작된 캐릭터입니다.</em>
 </p>
 
-<h2>👥 팀원 소개</h2>
-
-<div align="center">
-  <table>
-    <tr>
-      <th>이정석</th>
-      <th>박상준</th>
-      <th>한지훈</th>
-      <th>홍가연</th>
-    </tr>
-    <tr>
-      <td><img src="./pic/잠만보.png" width="150"/></td>
-      <td><img src="./pic/파오리.png"" width="150"/></td>
-      <td><img src="./pic/고라파덕.png"" width="150"/></td>
-      <td><img src="./pic/망나뇽.png"" width="150"/></td>
-    </tr>
-    <tr>
-      <td align="center"><a href="https://github.com/Zdeik"><img src="https://img.shields.io/badge/GitHub-Link-MediumSeaGreen?logo=github"/></a></td>
-      <td align="center"><a href="https://github.com/sjun4040"><img src="https://img.shields.io/badge/GitHub-Link-MediumSeaGreen?logo=github"/></a></td>
-      <td align="center"><a href="https://github.com/meanresult"><img src="https://img.shields.io/badge/GitHub-Link-MediumSeaGreen?logo=github"/></a></td>
-      <td align="center"><a href="https://github.com/gayeoniee"><img src="https://img.shields.io/badge/GitHub-Link-MediumSeaGreen?logo=github"/></a></td>
-    </tr>
-  </table>
-</div>
-
---- 
-# 📃프로젝트 기획서
-<details>
-<summary>프로젝트 기획안</summary>
-<a href="툭툭 기획서 PPT.pdf" target="_blank">기획안 (PDF)</a>
-<br><br>
-  
 ---
 
+## 📓 프로젝트 문서 모음
+
+<details>
+<summary>툭툭 기획서 PDF</summary>
+<a href="툭툭 기획서 PPT.pdf" target="_blank">툭툭 프로젝트 기획서 보러가기</a>
 </details>
 
 <details>
 <summary>시스템 구조 및 기술 선택 배경</summary>
-<a href="툭툭 시스템 구조 및 기술 선택 배경.pdf" target="_blank">시스템 구조 및 기술 선택 배경 (PDF)</a>
-<br><br>
-  
-이 문서에는 다음 내용이 포함되어 있습니다:   
-  
-- 시스템 처리 흐름
-- RAG vs Fine-tuning 선택 배경
-
----
-
+<a href="툭툭 시스템 구조 및 기술 선택 배경.pdf" target="_blank">세부 내용 (PDF)</a>
 </details>
 
 <details>
 <summary>프로토타입</summary>
-
-> 📦 **[툭툭 프로토타입 보러가기](https://sjun4040.github.io/prototype/)**  
-> 시스템이 실제로 어떻게 작동하는지 직접 확인해보세요!
-
+<a href="https://sjun4040.github.io/prototype/" target="_blank">▶️ 프로토타입 바로가기</a>
 </details>
-
-## 툭툭(Tooktook) 프로젝트 요구사항 정의서
-
-## 1차 프로젝트 개요
-### 툭툭(Tooktook)
-
-툭툭은 상담사의 업무를 돕는 **AI 기반 상담 지원 시스템**입니다.   
-복잡하고 반복적인 고객 문의 속에서 상담사가 더 빠르고 정확하게 대응할 수 있도록 툭툭이 옆에서 똑똑하게 도와줍니다.
-
-❔ 왜 만들었을까요?
-많은 상담사분들이 이런 고민을 가지고 있습니다:
-
-> “비슷한 질문이 계속 반복되는데, 답변을 찾는 데 시간이 너무 오래 걸려요.”   
-> “상담이 밀릴수록 고객은 화나고, 나는 더 급해져요.”   
-> “지금 상황에서 무슨 정보를 먼저 보여줘야 할지 모르겠어요.”   
-
-**툭툭은 이런 문제를 해결하기 위해 태어났습니다.**
-- 사람이 직접 모든 정보를 찾고 정리하지 않아도
-- 툭툭이 실시간으로 관련 자료를 추천하고
-- 음성 상담 내용을 자동으로 정리하며
-- 매뉴얼을 기반으로 대응 방식까지 제안합니다.
-
-
-**툭툭은 AI지만 주인공은 사람입니다**
-**툭툭은 상담사를 대체하는 시스템이 아닙니다.**
-> 사람이 중심이고 AI는 조력자입니다.   
-> 툭툭은 상담사가 더 전문적인 판단과 따뜻한 응대를 할 수 있도록
-> 뒤에서 조용히 보조하는 도우미입니다.
 
 ---
 
-## 📋 시스템 요약
-| 항목     | 내용                                                           |
-| ------ | ------------------------------------------------------------ |
-| 프로젝트명  | 툭툭 (Tooktook)                                                |
-| 목적     | 실시간 음성 인식과 AI 추천을 통해 상담사의 대응 효율성과 정확성을 높이는 웹 기반 상담 지원 시스템 개발 |
-| 대상 사용자 | 상담사                                                       |
-| 시스템 범위 | 음성 입력 → 실시간 텍스트 표시 → 메뉴얼 기반 응답 추천 → 상담 요약 저장              |
+## 💡 Tooktook은 어떤 문제를 해결하나요?
 
-### 시스템 흐름도
+> “비습한 질문이 계속 발생하는데 답변 찾는 데 시간이 너무 오래 간다”  
+> “상당이 밀리면 고객도 힘들고 나도 더 급해지는다”  
+> “지금 상황에서 무엇을 먼저 보여야 할지 모르겠다”
+
+툭툭은 이런 상당사의 문제를 해결합니다.
+
+- 음성 입력을 텍스트로 변환
+- 대화 내 주요 키워드 추출
+- 관련 자료 및 메뉴얼 기반 응답 문장 추천
+- 상당 진행 중 자동으로 요약점 정보 요약 및 저장
+
+---
+
+## 🔹 시스템 개요
+
+| 항목 | 내용 |
+|--------|-----------------------------|
+| 프로젝트명 | Tooktook (툭툭) |
+| 목적 | 상당사의 대응 효율성과 정확성 강화 |
+| 해결 방식 | STT + 키워드 추출 + RAG 기반 문서 추천 + 자동 요약 |
+| 사용자 | 상당사 (내부 시스템 사용자) |
+
+---
+
+### 📊 시스템 흐름도
 <img src="./pic/시스템흐름도.png" alt="흐름도" width="800"/>
 
-### 시스템 아키텍쳐
+### 📁 시스템 아키텍처
 <img src="./pic/시스템아키텍쳐.png" alt="아키텍쳐" width="700"/>
 
 ---
 
-## 기능 요구사항
-| ID   | 기능명      | 설명                   | 우선순위 |
-| ---- | -------- | -------------------- | ---- |
-| F-01 | STT 변환   | 수신된 음성을 실시간 텍스트로 변환  | 중    |
-| F-02 | 텍스트 표시   | 변환된 텍스트를 화면에 실시간 출력  | 상    |
-| F-03 | 키워드 추출   | 발화에서 주요 키워드를 추출      | 상    |
-| F-04 | 응답 추천    | 키워드 기반으로 문서/응답을 추천   | 상    |
-| F-05 | 검색    |  상담사가 원할 때 메뉴얼 검색 | 중  |
-| F-06 | 상담 요약    | 흐름을 요약한 자동 요약 생성  | 중    |
-| F-07 | 상담 저장    | 전체 상담 내용 및 요약을 저장    | 상    |
+## ⚡️ 핵심 기능 요약
 
-
-## 비기능 요구사항
-| 항목   | 요구사항                         |
-| ---- | ---------------------------- |
-| 실시간성 | 발화 후 3초 이내로 텍스트 및 추천 응답 제공   |
-| 정확성  | 키워드 추출 및 추천 응답 정확도 80% 이상    |
-| 보안   | 저장된 상담 내용은 암호화 저장 필요         |
-| 확장성  | 향후 챗봇 연동 또는 FAQ 자동화 가능 구조 고려 |
-
---- 
-
-## 🎬 툭툭 사용 시나리오
-
-**⏱ 흐름**
-
-- 상담사는 툭툭 시스템 웹 화면을 열고 상담 시작 버튼을 클릭
-- 전화 연결
-- 툭툭은 음성을 실시간으로 텍스트로 변환
-- 텍스트 내 주요 키워드(ex. 요금, 이자, 대출) 추출
-- 해당 키워드에 매칭된 응답 문구나 문서를 추천
-- 상담사는 추천된 응답을 고객에게 전달
-- 상담이 끝나면 자동 요약이 생성되고 저장됨
-
-
-## WBS
-<img src="./pic/WBS.png" alt="흐름도" width="1000"/>
-
+| ID   | 기능이름 | 설명 | 우선순위 |
+|------|-------------|------------------|--------|
+| F-01 | STT 변환     | 음성을 텍스트로 변환 | 중 |
+| F-02 | 텍스트 출력  | 변환된 텍스트 보여주기 | 상 |
+| F-03 | 키워드 추출  | 키워드 검색 | 상 |
+| F-04 | 응답 추천    | AI를 이용하여 추천 문구 출력 | 상 |
+| F-06 | 상담 요약    | 진행 중 요약점 자동 요약 | 중 |
+| F-07 | 상담 저장    | 전체 상담 내용 및 요약 저장 | 상 |
 
 ---
 
-## 사용 기술
+## 🔎 사용 시나리오 요약
+
+1. 상담사가 웹 시스템에 로그인 후 상담 시작
+2. 전화 연결 → 실시간 텍스트 변환
+3. 텍스트 내 키워드 자동 추출
+4. 관련 응답 문서 또는 문장 추천 (RAG 기반)
+5. 상담 종료 시 자동 요약 생성 및 저장
+
+---
+
+## 📊 WBS (Work Breakdown Structure)
+<img src="./pic/WBS.png" alt="WBS" width="1000"/>
+
+---
+
+## 🛠️ 사용 기술 스택
 
 ### 💻 Languages
 
@@ -179,7 +121,6 @@
 ![SentenceTransformers](https://img.shields.io/badge/SentenceTransformers-6e5a90?style=flat&logo=sentencetransformers&logoColor=white)
 ![GeminiApi](https://img.shields.io/badge/GeminiApi-9f22c8?style=flat&logo=gemini&logoColor=white)
 ![GPTApi](https://img.shields.io/badge/GPTApi-29051f?style=flat&logo=gpt&logoColor=white)
-![FastApi](https://img.shields.io/badge/FastApi-3612d8?style=flat&logo=fastapi&logoColor=white)
 
 ### 📦 Database
 
