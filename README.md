@@ -32,7 +32,7 @@
 <details>
 <summary>프로토타입</summary>
 
-> 📦 **[툭툭 프로토타입](https://sjun4040.github.io/prototype/)**  
+> 📦 **[툭툭 프로토타입](https://gayeoniee.github.io/tooktook_prototype/)**  
 
 </details>
 
